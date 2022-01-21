@@ -1,0 +1,23 @@
+<div class="cars">
+  <h2
+    appBacground
+    [hoverColor]="'blue'"
+    [defaultColor]="'yellow'"
+  >
+    Форма
+  </h2>
+
+  <hr>
+  <app-add-car (takeCarInfo)="addCar($event)"></app-add-car>
+  <hr>
+
+  <button class="btn" (click)="changeName()">
+    Изменить имя
+  </button>
+
+  <ul class="cars__car-list">
+    <li class="cars__car list-group-item" *ngFor="let car of cars">
+      <app-car [carItem]="car"></app-car>
+    </li>
+  </ul>
+</div>
